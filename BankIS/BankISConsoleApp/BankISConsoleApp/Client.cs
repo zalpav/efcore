@@ -6,6 +6,13 @@ namespace BankIS.ConsoleApp
 {
     public class Client
     {
+        public Client(string Name, int Age, Address address)
+        {
+            HomeAddress = address;
+        }
+        /// <summary>
+        /// Jméno klienta
+        /// </summary>
         public string Name { get; set; }
 
         public int Age { get; set; }
@@ -16,9 +23,16 @@ namespace BankIS.ConsoleApp
         {
             Console.WriteLine(Name);
             Console.WriteLine(Age);
-            Console.WriteLine(HomeAddress.Street);
-            Console.WriteLine(HomeAddress.City);
-            Console.WriteLine();
+            if (HomeAddress != null && !string.IsNullOrEmpty(HomeAddress.Street))
+            {
+                Console.WriteLine(HomeAddress.Street);
+                Console.WriteLine(HomeAddress.City);
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Adresa nezdána");
+            }
         }
     }
 }
