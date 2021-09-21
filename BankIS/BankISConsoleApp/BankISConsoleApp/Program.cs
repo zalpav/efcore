@@ -16,7 +16,7 @@ namespace BankIS.ConsoleApp
 
             //c1.Name = "Pepa Čech";
             //c1.Age = 43;
-            
+
             ////c1.HomeAddress = new Address();
             ////c1.HomeAddress.Street = "Žižkova 15";
             ////c1.HomeAddress.City = "Praha";
@@ -32,13 +32,19 @@ namespace BankIS.ConsoleApp
             ////c2.HomeAddress.City = "Brno";
             //c2.Print();
 
-            Client c3;
 
-            c3 = new Client("Jan Pech", 28, new Address("Jermanova 32", "Olomouc"));
-            Console.WriteLine(c3.Name);
-            Console.WriteLine(c3.Age);
-            Console.WriteLine(c3.HomeAddress.Street);
-            Console.WriteLine(c3.HomeAddress.City);
+            Client c1 = new Client("Jan Pech", 28, new Address(street: "Jermanova 32", city: "Olomouc"));
+            Client c2 = new Client("Ondřej Lexa", 35, new Address("Koněvova 46", "Brno"));
+
+            c1.SaveToFile("klient1.txt");
+            c2.SaveToFile("klient2.txt");
+
+            c1.Print();
+            c2.Print();
+ 
+            Console.WriteLine("c1: " + c1.ToString() );
+            Console.WriteLine("c2: " + c2.ToString());
+            Console.WriteLine();
 
             Console.ReadLine();
 

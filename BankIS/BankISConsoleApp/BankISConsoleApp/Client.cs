@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace BankIS.ConsoleApp
 {
     public class Client
     {
-        public Client(string Name, int Age, Address address)
+        public Client(string name, int age, Address address)
         {
+            Name = name;
+            Age = age;
             HomeAddress = address;
         }
         /// <summary>
@@ -25,14 +28,24 @@ namespace BankIS.ConsoleApp
             Console.WriteLine(Age);
             if (HomeAddress != null && !string.IsNullOrEmpty(HomeAddress.Street))
             {
-                Console.WriteLine(HomeAddress.Street);
-                Console.WriteLine(HomeAddress.City);
+                Console.WriteLine( ToString() );
+//                Console.WriteLine(HomeAddress.City);
                 Console.WriteLine();
             }
             else
             {
                 Console.WriteLine("Adresa nezdána");
             }
+        }
+
+        public void SaveToFile(string pathToFile)
+        {
+            File.WriteAllText(pathToFile, ToString() );
+        }
+
+        public override string ToString()
+        {
+            return $"{Name};{Age};{HomeAddress.City};{HomeAddress.Street}";
         }
     }
 }
