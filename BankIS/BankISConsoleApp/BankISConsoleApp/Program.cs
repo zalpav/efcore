@@ -10,7 +10,7 @@ namespace BankIS.ConsoleApp
 
             Address ostrava = new Address();
             ostrava.City = "Ostrava";
-            ostrava.Street = "Václavovská 21";
+            ostrava.Street = "Václavovická 21";
 
             Client c1 = new Client();
 
