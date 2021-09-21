@@ -10,9 +10,15 @@ namespace BankIS.ConsoleApp
 
         public int Age { get; set; }
 
+        public Address HomeAddress { get; set; }
+
         public void Print()
         {
             Console.WriteLine(Name);
+            Console.WriteLine(Age);
+            Console.WriteLine(HomeAddress.Street);
+            Console.WriteLine(HomeAddress.City);
+            Console.WriteLine();
         }
     }
 }
