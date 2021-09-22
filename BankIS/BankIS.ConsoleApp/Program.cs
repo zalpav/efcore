@@ -33,8 +33,11 @@ namespace BankIS.ConsoleApp
             int minAge = 20;
             int maxAge = 40;
 
-            var result = clients.Where(client => client.Age > minAge);
-             result = result.Where(client => client.Age < maxAge);
+            //var result = clients.Where(client => client.Age > minAge);
+            //    result = result.Where(client => client.Age < maxAge);
+            //    result = result.Where(client => client.HomeAddress.City == "Olomouc");
+
+            var result = clients.Where(client => client.Age > minAge && client.Age < maxAge && client.HomeAddress.City == "Olomouc");
 
             Console.WriteLine($"Order by Age: ");
             foreach (var name in result)
@@ -43,6 +46,14 @@ namespace BankIS.ConsoleApp
                 Console.WriteLine(name);
             }
 
+            var resultInt = clients.Where(client => client.HomeAddress.City == "Brno").Count();
+
+            Console.WriteLine($"Count: { resultInt }");
+
+            var resultAvg = clients.Where(client => client.HomeAddress.City == "Praha")
+                                    .Average(client => client.Age);
+
+            Console.WriteLine($"Prumer: { resultAvg }");
 
             //var result = clients.Where(client => client.Age > 30).ToList();
             //Console.WriteLine($"Over {age}: ");
