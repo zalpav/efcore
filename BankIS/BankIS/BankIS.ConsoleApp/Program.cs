@@ -13,6 +13,9 @@ namespace BankIS.ConsoleApp
 
             var c1 = new Client(city: "Brno", street: "Kopečná 23", jmeno: "Martin Novák", age: 55);
             var c2 = new Client("Tovární 13", "Ostrava", "Martina Veselá", 33);
+            var c3 = new Client("Česká 21", "Ostrava", "Petr Roth", 24);
+            var c4 = new Client("Dlouhá 5", "Zlín", "Roman Šulc", 36);
+            var c5 = new Client("Paseky 434", "Lukov", "Martin Guts", 41);
 
             // připravte metodu "SaveToFile(string filePath) na klientovi
 
