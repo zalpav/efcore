@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net.Http;
+
 
 namespace BankIS.ConsoleApp
 {
@@ -17,6 +17,23 @@ namespace BankIS.ConsoleApp
             var c4 = new Client("Dlouhá 5", "Zlín", "Roman Šulc", 36);
             var c5 = new Client("Paseky 434", "Lukov", "Martin Guts", 41);
 
+            List<Client> clients = new List<Client>();
+            clients.Add(c1);
+            clients.Add(c2);
+            clients.Add(c3);
+            clients.Add(c4);
+            clients.Add(c5);
+
+            var cnt = clients.Count;
+
+            global::System.Console.WriteLine($"Pocet klientu v seznamu:  {cnt}");
+
+            foreach(var client in clients )
+            {
+                client.Print();
+            }
+
+
             // připravte metodu "SaveToFile(string filePath) na klientovi
 
             Console.WriteLine("c1: " + c1.ToString());
@@ -31,6 +48,8 @@ namespace BankIS.ConsoleApp
             
             c2.Print();
 
+            Console.ReadLine();
+
             c1.SaveToFile("klient1.txt");
             c2.SaveToFile("klient2.txt");
 
@@ -38,14 +57,6 @@ namespace BankIS.ConsoleApp
 
             double cos = Math.Cos(3.2);
 
-            using (HttpClient webClient = new HttpClient())
-            {
-                var response = webClient.GetAsync("https://API.projekt.cz").Result;
-                if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                {
-                    //response OK HTTP 200
-                }
-            }
 
             string[] pole_stringu = new string[23];
 
@@ -55,7 +66,7 @@ namespace BankIS.ConsoleApp
             
             list.Add("prvni item");
 
-            List<Client> clients = new List<Client>();
+//            List<Client> clients = new List<Client>();
 
             clients.Add(c1);
             clients.Add(c2);
