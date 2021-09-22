@@ -79,9 +79,15 @@ namespace BankIS.ConsoleApp
         }
 
 
-        public void SaveToFile(string pathToFile)
+        public static void SaveToFile(string pathToFile, List<Client> clients)
         {
-            File.WriteAllText(pathToFile, ToString());
+            //File.CreateText(pathToFile);
+            foreach (var client in clients)
+            {
+                var newLine = Environment.NewLine;
+                File.AppendAllText(pathToFile, client.ToString() + newLine);
+            }
+            //File.WriteAllText(pathToFile, ToString());
         }
 
         public override string ToString()

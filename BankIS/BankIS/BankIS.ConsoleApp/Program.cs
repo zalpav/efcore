@@ -50,8 +50,9 @@ namespace BankIS.ConsoleApp
 
             Console.ReadLine();
 
-            c1.SaveToFile("klient1.txt");
-            c2.SaveToFile("klient2.txt");
+           
+            Client.SaveToFile("klients.txt", clients);
+            //c2.SaveToFile("klient2.txt");
 
             bool allowed = Address.IsCityAllowed("xxx");
 
