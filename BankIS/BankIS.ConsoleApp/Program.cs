@@ -20,7 +20,7 @@ namespace BankIS.ConsoleApp
             var cnt = clients.Count;
             Console.WriteLine($"Počet klientů v seznamu: {cnt}");
 
-            foreach(var client in clients)
+            foreach (var client in clients)
             {
                 client.Print();
             }
@@ -30,19 +30,50 @@ namespace BankIS.ConsoleApp
 
             // LINQ
 
-            int age = 45;
+            int minAge = 20;
+            int maxAge = 40;
+
+            var result = clients.Where(client => client.Age > minAge);
+             result = result.Where(client => client.Age < maxAge);
+
+            Console.WriteLine($"Order by Age: ");
+            foreach (var name in result)
+            {
+                //client.Print();
+                Console.WriteLine(name);
+            }
+
+
             //var result = clients.Where(client => client.Age > 30).ToList();
             //Console.WriteLine($"Over {age}: ");
 
-            var result = clients.Where(client => client.HomeAddress.City == "Brno")
-                                .OrderBy(c => c.Name)
-                                .ToList();
-            Console.WriteLine($"Order by Age: ");
+            //var result = clients.Where(client => client.HomeAddress.City == "Brno")
+            //                    .OrderBy(c => c.Name)
+            //                    .ToList();
 
-            foreach ( var client in result)
-            {
-                client.Print();
-            }
+            //var result = clients.Select(c => new { c.Name })
+            //                    .ToString();
+
+            //Console.WriteLine($"Order by Age: ");
+
+            //foreach (var name in result)
+            //{
+            //    //client.Print();
+            //    Console.WriteLine(name);
+            //}
+
+            //var maxAge = clients//.Where(client => client.HomeAddress.City == "Brno")
+            //                    //.OrderBy(c => c.Name)
+            //                    .Max(c => c.Age);
+
+            //Console.WriteLine(maxAge);
+
+            //var resultMax = clients.Where(client => client.Age == clients.Max(c => c.Age))
+            //                        .ToList();
+
+
+            //Console.WriteLine($"Max Age: { resultMax[0].ToString() }");
+
 
             Console.ReadLine();
         }
