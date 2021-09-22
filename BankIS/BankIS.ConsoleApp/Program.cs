@@ -55,6 +55,16 @@ namespace BankIS.ConsoleApp
 
             Console.WriteLine($"Prumer: { resultAvg }");
 
+            var resultCity = clients.Select(client => client.HomeAddress.City)
+                                    .Distinct();
+
+            Console.WriteLine($"Cities: ");
+            foreach (var name in resultCity)
+            {
+                //client.Print();
+                Console.WriteLine(name);
+            }
+
             //var result = clients.Where(client => client.Age > 30).ToList();
             //Console.WriteLine($"Over {age}: ");
 
