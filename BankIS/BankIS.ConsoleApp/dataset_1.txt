@@ -1,0 +1,66 @@
+Jakub Novotný;49;Pod Kaštany;Olomouc
+Martina Vyskočilová;22;Třešňová;Drážďany
+Viktor Novák;45;Dubová;Ostrava
+Martina Fialová;36;Bzenecká;Ostrava
+Pavel Krátký;31;Prušánecká;Brno
+Jitka Janů;39;Pod Kaštany;Olomouc
+Jakub Janů;23;Bzenecká;Drážďany
+Petra Nováková;30;Jasanová;Praha
+Jan Krátký;30;Jasanová;Olomouc
+Martina Nováková;41;Jedlého;Drážďany
+Viktor Vyskočil;63;Dubová;Praha
+Jana Kolomazníková;40;Pod Kaštany;Brno
+Adam Novotný;63;Višňová;Praha
+Pavla Novotná;45;Višňová;Brno
+Petr Janů;63;Pod Kaštany;Praha
+Petra Novotná;40;Višňová;Drážďany
+Jan Novotný;31;Pod Kaštany;Drážďany
+Martina Fialová;21;Olšová;Olomouc
+Adam Novák;23;Dubová;Ostrava
+Jitka Stará;49;Slavíkova;Olomouc
+Adam Klíč;41;Slavíkova;Brno
+Anna Janů;40;Prušánecká;Brno
+Viktor Vyskočil;21;Prušánecká;Olomouc
+Pavla Stará;49;Slavíkova;Olomouc
+Martin Vyskočil;30;Dlouhá;Olomouc
+Petra Vyskočilová;31;Jedlého;Praha
+Viktor Vyskočil;36;Horníkova;Olomouc
+Martina Kolomazníková;30;Kaštanová;Brno
+Petr Janů;22;Horníkova;Brno
+Anna Kolomazníková;22;Olšová;Olomouc
+Tomáš Novotný;26;Dubová;Praha
+Petra Vyskočilová;22;Olšová;Olomouc
+Petr Vyskočil;63;Jedlého;Ostrava
+Tereza Fialová;21;Modřínová;Brno
+Jan Krátký;30;Dubová;Drážďany
+Jitka Novotná;63;Dubová;Praha
+Martin Janů;38;Kaštanová;Drážďany
+Pavla Vyskočilová;40;Pod Kaštany;Drážďany
+Adam Krátký;41;Bzenecká;Praha
+Jitka Stará;26;Višňová;Ostrava
+Viktor Novák;37;Pod Kaštany;Praha
+Jana Stará;41;Jasanová;Brno
+Petr Kolomazník;26;Dubová;Ostrava
+Martina Kolomazníková;26;Dubová;Brno
+Tomáš Janů;31;Dubová;Praha
+Jana Janů;40;Třešňová;Ostrava
+Jakub Janů;40;Pod Kaštany;Olomouc
+Anna Nováková;21;Višňová;Drážďany
+Pavel Kolomazník;49;Olšová;Olomouc
+Tereza Kolomazníková;37;Slavíkova;Drážďany
+Adam Novák;63;Višňová;Drážďany
+Martina Stará;63;Slavíkova;Drážďany
+Adam Novák;31;Dubová;Ostrava
+Jana Stará;40;Bzenecká;Praha
+Jakub Janů;38;Prušánecká;Drážďany
+Jana Novotná;30;Dubová;Ostrava
+Petr Novotný;41;Třešňová;Olomouc
+Tereza Stará;38;Višňová;Brno
+Viktor Novák;31;Jedlého;Drážďany
+Anna Nováková;38;Kaštanová;Olomouc
+Adam Janů;30;Dubová;Drážďany
+Martina Stará;22;Třešňová;Brno
+Jakub Kolomazník;26;Jedlého;Olomouc
+Anna Novotná;30;Třešňová;Brno
+Martin Novák;60;Prušánecká;Praha
+Petra Kolomazníková;63;Pod Kaštany;Ostrava

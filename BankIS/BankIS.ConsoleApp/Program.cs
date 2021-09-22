@@ -12,7 +12,7 @@ namespace BankIS.ConsoleApp
         {
             Console.WriteLine("Hello World!");
 
-            var file = "allclients.txt";
+            var file = "dataset_1.txt";
             Console.WriteLine($"Načítám klienty z {file}");
 
             var clients = Client.LoadClients(file);
