@@ -79,15 +79,9 @@ namespace BankIS.ConsoleApp
         }
 
 
-        public static void SaveToFile(string pathToFile, List<Client> clients)
+        public void SaveToFile(string pathToFile)
         {
-            //File.CreateText(pathToFile);
-            foreach (var client in clients)
-            {
-                var newLine = Environment.NewLine;
-                File.AppendAllText(pathToFile, client.ToString() + newLine);
-            }
-            //File.WriteAllText(pathToFile, ToString());
+            File.WriteAllText(pathToFile, ToString());
         }
 
         public override string ToString()
@@ -98,6 +92,37 @@ namespace BankIS.ConsoleApp
         public void Dispose()
         {
             // zavreni network spojeni atd.   
+        }
+
+
+        public static void SaveClientsToFile(IEnumerable<Client> clients, string file)
+        {
+            foreach (var client in clients)
+            {
+                var clientWithNewLine = client.ToString() + Environment.NewLine;
+                File.AppendAllText(file, clientWithNewLine );
+            }
+        }
+
+        public static List<Client> LoadClients(string file)
+        {
+            List<Client> result = new List<Client>();
+
+            var lines = File.ReadAllLines(file);
+
+            foreach(var line in lines)
+            {
+                var items = line.Split(';');
+                var name = items[0];
+                var age = int.Parse( items[1] );
+                var street = items[2];
+                var city = items[3];
+
+                Client c = new Client(street: street, city: city, jmeno: name, age: age);
+                result.Add(c);
+            }
+
+            return result;
         }
     }
 }
