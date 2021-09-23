@@ -9,13 +9,13 @@ namespace BankIS.ConsoleApp
 
         public DbSet<Address> Adressess { get; set; }
 
-        public string DbPath { get; private set; }
-        public BankContext()
-        {
-            var folder = Environment.SpecialFolder.LocalApplicationData;
-            var path = Environment.GetFolderPath(folder);
-            DbPath = $"{path}{System.IO.Path.DirectorySeparatorChar}bankdb01.db";
-        }
+        //public string DbPath { get; private set; }
+        //public BankContext()
+        //{
+        //    var folder = Environment.SpecialFolder.LocalApplicationData;
+        //    var path = Environment.GetFolderPath(folder);
+        //    DbPath = $"{path}{System.IO.Path.DirectorySeparatorChar}bankdb01.db";
+        //}
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
