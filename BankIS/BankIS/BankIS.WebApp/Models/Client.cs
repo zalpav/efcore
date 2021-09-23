@@ -61,7 +61,15 @@ namespace BankIS.MVC_WebApp.Models
             }
         }
 
+        public double AccountSum()
+        {
+            return Transactions.Select(t => t.Value).Sum();
+        }
 
+        //public string DispCity()
+        //{
+        //    return HomeAddress.City.Select(a => a.ci)
+        //}
         /// <summary>
         /// Vytiskne do konzole jmeno a adresu klienta
         /// </summary>
@@ -82,7 +90,7 @@ namespace BankIS.MVC_WebApp.Models
 
         public override string ToString()
         {
-            return $"{FirstName};{LastName};{DateOfBirth};{HomeAddress.Street};{HomeAddress.City}";
+            return $"{FirstName};{LastName};{DateOfBirth};{HomeAddress.Street};{HomeAddress.City};{HomeAddress.ZipCode}";
         }
 
 

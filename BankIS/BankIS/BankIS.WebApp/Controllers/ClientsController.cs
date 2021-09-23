@@ -44,6 +44,8 @@ namespace BankIS.MVC_WebApp.Controllers
             }
 
             var client = await _context.Clients
+                .Include(c => c.Transactions)
+                .Include(c => c.HomeAddress)
                 //.FirstOrDefaultAsync(m => m.Id == id);
                 .SingleOrDefaultAsync(m => m.Id == id);
 

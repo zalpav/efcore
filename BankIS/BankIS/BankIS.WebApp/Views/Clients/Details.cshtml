@@ -28,7 +28,30 @@
         <dd>
             @Html.DisplayFor(model => model.DateOfBirth)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => Model.HomeAddress.Street)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => Model.HomeAddress.Street)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => Model.HomeAddress.City)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => Model.HomeAddress.City)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => Model.HomeAddress.ZipCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => Model.HomeAddress.ZipCode)
+        </dd>
+
     </dl>
+    <div>
+        <h4>Stav (suma) účtu: @Model.AccountSum()</h4>
+
+    </div>
     <div>
         @foreach(var tx in Model.Transactions)
         {
