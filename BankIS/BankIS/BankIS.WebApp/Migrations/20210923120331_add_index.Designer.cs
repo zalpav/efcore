@@ -4,14 +4,16 @@ using BankIS.MVC_WebApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BankIS.MVC_WebApp.Migrations
 {
     [DbContext(typeof(BankContext))]
-    partial class BankContextModelSnapshot : ModelSnapshot
+    [Migration("20210923120331_add_index")]
+    partial class add_index
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,40 +64,11 @@ namespace BankIS.MVC_WebApp.Migrations
                     b.ToTable("Clients");
                 });
 
-            modelBuilder.Entity("BankIS.MVC_WebApp.Models.Transaction", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("ClientID");
-
-                    b.Property<DateTime>("Date");
-
-                    b.Property<int>("Type");
-
-                    b.Property<double>("Value");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClientID");
-
-                    b.ToTable("Transactions");
-                });
-
             modelBuilder.Entity("BankIS.MVC_WebApp.Models.Client", b =>
                 {
                     b.HasOne("BankIS.MVC_WebApp.Address", "HomeAddress")
                         .WithMany()
                         .HasForeignKey("HomeAddressId");
-                });
-
-            modelBuilder.Entity("BankIS.MVC_WebApp.Models.Transaction", b =>
-                {
-                    b.HasOne("BankIS.MVC_WebApp.Models.Client", "Client")
-                        .WithMany("Transactions")
-                        .HasForeignKey("ClientID")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

@@ -17,6 +17,8 @@ namespace BankIS.MVC_WebApp.Data
 
         public DbSet<Address> Adressess { get; set; }
 
+        public DbSet<Transaction> Transactions { get; set; }
+
         //public string DbPath { get; private set; }
         //public BankContext()
         //{
@@ -24,6 +26,13 @@ namespace BankIS.MVC_WebApp.Data
         //    var path = Environment.GetFolderPath(folder);
         //    DbPath = $"{path}{System.IO.Path.DirectorySeparatorChar}bankdb01.db";
         //}
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .Entity<Client>()
+                .HasIndex(c => c.LastName);
+        }
 
 
         //protected override void OnConfiguring(DbContextOptionsBuilder options)

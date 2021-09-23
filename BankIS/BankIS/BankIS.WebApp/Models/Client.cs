@@ -27,12 +27,15 @@ namespace BankIS.MVC_WebApp.Models
         [MaxLength(100)]
         public string FirstName { get; set; }
 
-        [MaxLength(100)]
+        //[Required]
+        [MaxLength(100), Required]
         public string LastName { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
 
         public Address HomeAddress { get; set; }
+
+        public List<Transaction> Transactions { get; set; }
 
         [NotMapped]
         //public int Age() { get; set; }
@@ -42,13 +45,19 @@ namespace BankIS.MVC_WebApp.Models
                 {
                 return GetAge();
             }
-            
         }
 
         //[NotMapped]
         public int GetAge()
         {
-            return DateTime.Now.Year - DateOfBirth.Year;
+            if(DateOfBirth.HasValue)
+            {
+                return DateTime.Now.Year - DateOfBirth.Value.Year;
+            }
+            else
+            {
+                return -1;
+            }
         }
 
 
