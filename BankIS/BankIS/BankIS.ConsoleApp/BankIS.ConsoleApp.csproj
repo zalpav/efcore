@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210923055953_InitLite.cs" />
+    <Compile Remove="Migrations\20210923070937_Init.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient.SNI" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="3.1.19" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="3.1.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.19">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="3.1.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.19">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="allclients.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="dataset_1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

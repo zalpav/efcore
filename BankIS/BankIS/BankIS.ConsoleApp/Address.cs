@@ -17,22 +17,18 @@ namespace BankIS.ConsoleApp
             Street = street;
             City = city;
         }
+
+        public int Id { get; set; }
         public string Street { get; set; }
 
-        public string City {  get; set; }
+        public string City { get; set; }
+
+        public string ZipCode { get; set; }
 
         public void Print()
         {
             Console.WriteLine("Ulice: {0}, Město {1}", Street, City);
         }
 
-        public static bool IsCityAllowed(string city)
-        {
-            //ban na Opavu
-            if (city == "Opava")
-                return false;
-            else
-                return true;
-        }
     }
 }
