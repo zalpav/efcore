@@ -7,12 +7,22 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BankIS.MVC_WebApp.Data;
 using BankIS.MVC_WebApp.Models;
+using BankIS.MVC.Data;
 
 namespace BankIS.MVC_WebApp.Controllers
 {
     public class ClientsController : Controller
     {
         private readonly BankContext _context;
+        public string Seed()
+        {
+            var xml = SeedDb.LoadFromXML();
+
+            _context.AddRange(xml);
+            _context.SaveChanges();
+
+            return "ok";
+        }
 
         public ClientsController(BankContext context)
         {
