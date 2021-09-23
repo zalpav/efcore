@@ -29,6 +29,12 @@
             @Html.DisplayFor(model => model.DateOfBirth)
         </dd>
     </dl>
+    <div>
+        @foreach(var tx in Model.Transactions)
+        {
+            <p>@tx.Date.ToString() - @tx.Value.ToString()</p>
+        }
+    </div>
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |

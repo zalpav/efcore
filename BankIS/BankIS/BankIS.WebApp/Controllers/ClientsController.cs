@@ -44,7 +44,9 @@ namespace BankIS.MVC_WebApp.Controllers
             }
 
             var client = await _context.Clients
-                .FirstOrDefaultAsync(m => m.Id == id);
+                //.FirstOrDefaultAsync(m => m.Id == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
+
             if (client == null)
             {
                 return NotFound();

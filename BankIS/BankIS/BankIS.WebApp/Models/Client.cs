@@ -15,6 +15,7 @@ namespace BankIS.MVC_WebApp.Models
         public Client()
         {
             HomeAddress = new Address();
+            //Transactions = new List<Transaction>();
         }
 
         [Key]
@@ -35,7 +36,7 @@ namespace BankIS.MVC_WebApp.Models
 
         public Address HomeAddress { get; set; }
 
-        public List<Transaction> Transactions { get; set; }
+        public List<Transaction> Transactions { get; set; } = new List<Transaction>();
 
         [NotMapped]
         //public int Age() { get; set; }
